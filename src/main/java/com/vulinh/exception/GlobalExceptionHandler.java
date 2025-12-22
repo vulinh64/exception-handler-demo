@@ -29,8 +29,8 @@ public class GlobalExceptionHandler {
     return fromErrorCode(ErrorCode.M001);
   }
 
-  @ExceptionHandler(NotFound401Exception.class)
-  public ResponseEntity<Void> handleNotFound401Exception(NotFound401Exception ex) {
+  @ExceptionHandler(NotFound404Exception.class)
+  public ResponseEntity<Void> handleNotFound401Exception(NotFound404Exception ex) {
     showExceptionMessage(ex);
 
     // Another way to return HttpStatus without @ResponseStatus

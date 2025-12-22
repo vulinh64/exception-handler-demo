@@ -6,7 +6,7 @@ import com.vulinh.data.DemoRequest;
 import com.vulinh.data.DemoResponse;
 import com.vulinh.data.ResponseObject;
 import com.vulinh.exception.IdenticalException;
-import com.vulinh.exception.NotFound401Exception;
+import com.vulinh.exception.NotFound404Exception;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -38,7 +38,7 @@ public class DemoController {
     var uppercaseKey = name.toUpperCase();
 
     if (!DUMMY_DATA.containsKey(uppercaseKey)) {
-      throw new NotFound401Exception(name);
+      throw new NotFound404Exception(name);
     }
 
     return ResponseObject.of(
