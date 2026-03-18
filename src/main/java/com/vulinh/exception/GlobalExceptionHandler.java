@@ -30,7 +30,7 @@ public class GlobalExceptionHandler {
   }
 
   @ExceptionHandler(NotFound404Exception.class)
-  public ResponseEntity<Object> handleNotFound401Exception(NotFound404Exception ex) {
+  public ResponseEntity<Object> handleNotFound404Exception(NotFound404Exception ex) {
     showExceptionMessage(ex);
 
     // Another way to return HttpStatus without @ResponseStatus
